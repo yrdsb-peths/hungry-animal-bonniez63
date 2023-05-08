@@ -20,5 +20,8 @@ public class MyWorld extends World
         
         Snake snake = new Snake();
         addObject(snake, 300, 200);
+        
+        Strawberry strawberry = new Strawberry();
+        addObject(strawberry, 300, 0);
     }
 }
