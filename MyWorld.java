@@ -19,9 +19,16 @@ public class MyWorld extends World
         super(600, 400, 1);
         
         Snake snake = new Snake();
-        addObject(snake, 300, 200);
+        addObject(snake, 300, 300);
         
+        createStrawberry();
+    }
+    
+    public void createStrawberry()
+    {
         Strawberry strawberry = new Strawberry();
-        addObject(strawberry, 300, 0);
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(strawberry, x, y);
     }
 }

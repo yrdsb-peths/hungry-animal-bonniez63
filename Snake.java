@@ -23,6 +23,17 @@ public class Snake extends Actor
         {
             move(1);
         }
-        removeTouching(Strawberry.class);
+        eat();
+    }
+    
+    public void eat()
+    {
+        if(isTouching(Strawberry.class))
+        {
+            removeTouching(Strawberry.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createStrawberry();
+        }
+        
     }
 }
