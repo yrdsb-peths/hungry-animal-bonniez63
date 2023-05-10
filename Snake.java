@@ -15,6 +15,14 @@ public class Snake extends Actor
     public void act()
     {
         // Add your action code here.
-        move(1);
+        if(Greenfoot.isKeyDown("left"))
+        {
+            move(-1);
+        }
+        else if(Greenfoot.isKeyDown("right"))
+        {
+            move(1);
+        }
+        removeTouching(Strawberry.class);
     }
 }
