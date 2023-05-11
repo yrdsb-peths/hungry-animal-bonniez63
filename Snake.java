@@ -33,6 +33,7 @@ public class Snake extends Actor
             removeTouching(Strawberry.class);
             MyWorld world = (MyWorld) getWorld();
             world.createStrawberry();
+            world.increaseScore();
         }
         
     }
