@@ -1,4 +1,5 @@
 #Greenfoot project file
+class.MyWorld.image=strawberry-field-17090673.jpg
 class.Snake.image=snake.png
 class.Strawberry.image=stawberry.png
 dependency1.from=MyWorld
@@ -16,12 +17,15 @@ dependency4.type=UsesDependency
 dependency5.from=Snake
 dependency5.to=Strawberry
 dependency5.type=UsesDependency
-editor.fx.0.height=661
+dependency6.from=Strawberry
+dependency6.to=MyWorld
+dependency6.type=UsesDependency
+editor.fx.0.height=659
 editor.fx.0.width=814
-editor.fx.0.x=729
-editor.fx.0.y=215
+editor.fx.0.x=791
+editor.fx.0.y=180
 height=1056
-package.numDependencies=5
+package.numDependencies=6
 package.numTargets=4
 project.charset=windows-1252
 publish.hasSource=false
