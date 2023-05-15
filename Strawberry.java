@@ -14,7 +14,17 @@ public class Strawberry extends Actor
      */
     public void act()
     {
-        // Add your action code here.
-        setLocation(getX(), getY() + 2);
+        // Apple falls downward.
+        int x = getX();
+        int y = getY() + 2;
+        setLocation(x, y);
+        
+        //Game over when apple falls out of world.
+        MyWorld world = (MyWorld)getWorld();
+        if(getY() >= world.getHeight())
+        {
+            world.gameOver();
+            world.removeObject(this);
+        }
     }
 }
