@@ -12,6 +12,8 @@ public class Snake extends Actor
      * Act - do whatever the Snake wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    GreenfootSound snakeSound = new GreenfootSound("snake-hissing-6092.mp3");
     public void act()
     {
         // Add your action code here.
@@ -28,11 +30,12 @@ public class Snake extends Actor
     
     public void eat()
     {
-        if(isTouching(Strawberry.class))
+        if(isTouching(Apple.class))
         {
-            removeTouching(Strawberry.class);
+            snakeSound.play();
+            removeTouching(Apple.class);
             MyWorld world = (MyWorld) getWorld();
-            world.createStrawberry();
+            world.createApple();
             world.increaseScore();
         }
         
