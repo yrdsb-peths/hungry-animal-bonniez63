@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The Snake, our villain.
+ * The Snake, the main character.
  * 
  * @author Bonnie Zhuang
  * @version May 2023
@@ -72,6 +72,7 @@ public class Snake extends Actor
             facing = "right";
         }
         eat();
+        poisoned();
         animateSnake();
     }
     
@@ -85,6 +86,15 @@ public class Snake extends Actor
             world.createApple();
             world.increaseScore();
         }
-        
+    }
+    
+    public void poisoned()
+    {
+        if(isTouching(GreenApple.class))
+        {
+            removeTouching(GreenApple.class);
+            MyWorld world = (MyWorld)getWorld();
+            world.gameOver();
+        }
     }
 }

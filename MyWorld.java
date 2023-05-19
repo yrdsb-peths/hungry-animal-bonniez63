@@ -27,18 +27,18 @@ public class MyWorld extends World
         addObject(scoreLabel, 50, 50);
         
         createApple();
+        
     }
     
     public void increaseScore()
     {
         score++;
         scoreLabel.setValue(score);
-    }
-    
-    public void gameOver()
-    {
-        gameOverLabel = new Label("Game Over", 100);
-        addObject(gameOverLabel, 300, 200);
+        
+        if(score % 5 ==3)
+        {
+            createGreenApple();
+        }
     }
     
     public void createApple()
@@ -47,5 +47,19 @@ public class MyWorld extends World
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(apple, x, y);
+    }
+    
+    public void gameOver()
+    {
+        gameOverLabel = new Label("Game Over", 100);
+        addObject(gameOverLabel, 300, 200);
+    }
+    
+    public void createGreenApple()
+    {
+        GreenApple greenApple = new GreenApple();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(greenApple, x, y);
     }
 }
