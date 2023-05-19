@@ -41,7 +41,7 @@ public class TitleScreen extends World
     {
         Snake snake = new Snake();        
         addObject(snake,300, 200);
-        Label label = new Label("Use << and >> to Move", 50);
+        Label label = new Label("Use \u21E6 and \u21E8 to Move", 50);
         addObject(label,300,300);
         Label label2 = new Label("Click Space to Start", 60);
         addObject(label2,300,350);
